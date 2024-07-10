@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/index.css">
+    <title>goport</title>
+</head>
+
+<body class="whitemode">
+    <main>
+
+
+        <div class="notification">
+            <i class="bx bx-i"></i>
+        </div>
+        <div class="logo">Goport</div>
+        <div class="login-page" id="login">
+            <form>
+                <h2>Log in</h2>
+
+                <label for="email"><i class="bx bx-envelope"></i>Enter your email
+                </label>
+                <input type="text" class="user-email" name="email" id="user-email" required autofocus>
+                <label for="password"><i class='bx bx-lock-alt'></i>Password</label>
+                <input type="password" class="user-password" id="user-password" name="password" required>
+                <input type="submit" id="login-btn" class="login-button" value="Log in">
+                <div>don't have an account? <a href="#create-account" onclick="toggle('create')">create
+                        accout</a></div>
+            </form>
+        </div>
+        <div class="create-account" id="create-account">
+            <form>
+                <h2 id="create-acc">Sign Up</h2>
+
+                <label for="user-name">Enter your name</label>
+                <input type="text" class="user-email" name="user-name" id="register-name" autofocus>
+                <label for="email">Email</label>
+                <input type="email" class="user-email" id="register-email" name="email" required>
+                <select name="gender" id="gender">
+                    <option value="default">- Sex -</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
+                <label for="password">Password</label>
+                <input type="password" class="user-password" name="password" id="register-password" required>
+                <label for="confirm-password">Confirm password</label>
+                <input type="password" class="user-password" name="confirm-password" id="confirm-password" required>
+                <input type="submit" id="login-btn" class="register-button" value="Sign Up">
+                <div class="toggle">already have an acount? <a href="#login" onclick="toggle('login')">Log in</a></div>
+            </form>
+
+        </div>
+    </main>
+    <!-- <div class="footer">Goport by <span>Feaza</span></div> -->
+    <script src="/js/index.js"></script>
+    <script src="/js/users.js"></script>
+</body>
+
+</html>

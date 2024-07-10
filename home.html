@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Goport</title>
+</head>
+
+<body class="whitemode">
+    <div class="navigation-bar">
+        <div class="page-title">Feed</div>
+        <div class="profile-details">
+            <div id="menu-open">
+                <div class="user-profile-image">
+                </div>
+
+                <div class="profile-name profile"></div>
+            </div>
+        </div>
+        <div></div>
+        <section class="user-navigation">
+            <ul>
+                <li><a id="open-sign-out">Sign out</a></li>
+            </ul>
+        </section>
+
+    </div>
+    <div class="switch-mode"><i class='bx bxs-moon'></i></div>
+    <main id="posts">
+        <div class="generalpost">
+            <div class="categories hide-item"><button>Police brutality</button> <button>Bribery &
+                    corruption</button><button>Domestic violence</button></div>
+
+            <div class="post-container" id="post-cont">
+
+            </div>
+        </div>
+
+        <div class="user-post">
+            <!-- <h2 id="headd"> My Posts </h2> -->
+            <div class="empty-post">
+                <div>Empty</div>
+                <button id="post-now">Add a post
+                </button>
+            </div>
+            <div id="mypost" class="post-container "></div>
+        </div>
+        <div class="add-post">
+
+            <label for="upload-post-image"><img src="/img/imageupload.jpg" id="post-image-uploaded"></label>
+            <input type="file" accept="image/jpeg image/jpg image/png" id="upload-post-image" class="hide-item">
+            <textarea id="post-content" placeholder="post description"></textarea>
+            <div class="category">
+                <h3>Category</h3>
+                <div class="category-option">
+                    <p onclick="selectpostcategory('police brutality')">Police brutality</p>
+                    <p onclick="selectpostcategory('bribery & corruption')">Bribery & corruption </p>
+                    <p onclick="selectpostcategory('domestic violence')">Domestic violence</p>
+                </div>
+            </div>
+            <button id="add-post-btn">
+                Add Post
+            </button>
+        </div>
+    </main>
+    <div class="drop-down hide-menu">
+        <div class="camera" id="display-camera">Camera</div>
+        <div class="addpost" id="display-add-post">Upload</div>
+    </div>
+    <div class="alert hide-item">
+        <div class="alert-container">
+            <div class="Question">
+                <h2 class="alet-head bx bx-bell"></h2>
+                <p class="alert-question">Are you sure you want to sign out ? </p>
+            </div>
+            <button class="error" id="quit-sign-out"> No </button>
+            <button class="success" id="sign-out-button"> Yes</button>
+        </div>
+    </div>
+    <footer class="">
+        <div class="navigation-bottom">
+            <div><a href="" class="bx bx-home-alt-2"></a></div>
+            <div class="bx bx-camera"></div>
+            <div class='bx bxs-edit'></div>
+            <div class='bx bx-cog'></div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="/js/users.js"></script>
+    <script src="js/home.js"></script>
+    <script src="/js/index.js"></script>
+
+
+</body>
+
+</html>

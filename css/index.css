@@ -1,0 +1,308 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+  --defaultcolor: rgb(16, 179, 179);
+  --inputcolor: rgb(222, 222, 222);
+  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+  -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+  font-family: system-ui, -apple-system, -apple-system-font, "Segoe UI",
+    "Roboto", sans-serif;
+  margin: 0px;
+  padding: 50px 20px 20px 0px;
+  height: 100vh;
+  /* Padding to avoid the "unsafe" areas behind notches in the screen */
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+    env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  width: 100%;
+  transition: 0.6s;
+}
+.notification {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  top: -60px;
+  font-size: 16px;
+  padding: 10px 0px;
+}
+.whitemode {
+  background-image: linear-gradient(to bottom, #ffffff 30%, #f1eded 51%);
+  color: rgb(0, 0, 0);
+}
+.darkmode {
+  background-image: linear-gradient(to bottom, #1f1d45 30%, #03011b 51%);
+  color: whitesmoke;
+}
+.white {
+  background-color: white;
+}
+.black {
+  background-color: #1f1d45;
+}
+body {
+  transition: 0.6s;
+}
+.logo {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: var(--defaultcolor);
+  margin: 40px 15px 15px 15px;
+  padding-top: 20px;
+}
+
+.login-page {
+  margin: 50px 10px;
+
+  padding: 15px;
+  transition: 0.4s ease;
+  /* display: none; */
+}
+.create-account {
+  margin: 10px;
+  padding: 15px;
+  display: none;
+  transition: 0.4s ease;
+}
+.login-page h2 {
+  margin-bottom: 60px;
+}
+form {
+  width: 100%;
+  border: 2px;
+  display: block;
+  height: 300px;
+  margin-top: 40px;
+}
+.error {
+  background-color: rgb(255, 81, 81);
+}
+.success {
+  background-color: rgb(37, 159, 0);
+}
+.user-email,
+.user-password,
+#gender {
+  width: 93%;
+  background-color: var(--inputcolor);
+  border: none;
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 5px;
+}
+
+#login-btn {
+  width: 96%;
+  border: none;
+  background-color: var(--defaultcolor);
+  padding: 10px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+}
+label {
+  font-size: 13px;
+  margin: 0px 4px;
+  display: flex;
+  align-items: center;
+}
+label i {
+  color: rgb(6, 152, 152);
+  font-size: 15px;
+  display: flex;
+  padding-top: 2.5px;
+  padding-right: 4px;
+}
+/* .login-active {
+  background-color: var(--defaultcolor);
+  opacity: 1;
+} */
+form > div {
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+}
+
+#create-acc {
+  margin-bottom: 50px;
+}
+
+.hide-notification {
+  top: -80px;
+}
+.view-notification {
+  top: 0;
+}
+
+.toggle a {
+  color: var(--defaultcolor);
+}
+/* Portrait layout (default) */
+
+/* Landscape layout (with min-width) */
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#gender {
+  background-color: var(--inputcolor);
+  border: none;
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  width: 96%;
+}
+@media screen and (max-width: 600px) {
+  .whitemode {
+    background-image: linear-gradient(to bottom, #ffffff 30%, #f1eded 51%);
+    color: rgb(0, 0, 0);
+  }
+  .darkmode {
+    background-image: linear-gradient(to bottom, #1f1d45 30%, #03011b 51%);
+    color: whitesmoke;
+  }
+  .white {
+    background-color: white;
+  }
+  .black {
+    background-color: #1f1d45;
+  }
+  body {
+    transition: 0.6s;
+  }
+  .logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--defaultcolor);
+    margin: 40px 15px 15px 15px;
+    padding-top: 20px;
+  }
+
+  .login-page {
+    margin: 50px 10px;
+
+    padding: 15px;
+    transition: 0.4s ease;
+    /* display: none; */
+  }
+  .create-account {
+    margin: 10px;
+    padding: 15px;
+    display: none;
+    transition: 0.4s ease;
+  }
+  .login-page h2 {
+    margin-bottom: 60px;
+  }
+  form {
+    width: 100%;
+    border: 2px;
+    display: block;
+    height: 300px;
+    margin-top: 40px;
+  }
+  .error {
+    background-color: rgb(255, 81, 81);
+  }
+  .success {
+    background-color: rgb(37, 159, 0);
+  }
+  .user-email,
+  .user-password {
+    width: 93%;
+    border: none;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+  }
+  #login-btn {
+    width: 99%;
+    border: none;
+    background-color: var(--defaultcolor);
+    padding: 10px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  #gender {
+    width: 99%;
+  }
+  label {
+    font-size: 13px;
+    margin: 0px 4px;
+    display: flex;
+    align-items: center;
+  }
+  label i {
+    color: rgb(6, 152, 152);
+    font-size: 15px;
+    display: flex;
+    padding-top: 2.5px;
+    padding-right: 4px;
+  }
+  /* .login-active {
+    background-color: var(--defaultcolor);
+    opacity: 1;
+  } */
+  form > div {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  #create-acc {
+    margin-bottom: 50px;
+  }
+
+  .hide-notification {
+    top: -80px;
+  }
+  .view-notification {
+    top: 0;
+  }
+  footer {
+    display: block;
+  }
+  footer span {
+    color: var(--defaultcolor);
+    font-weight: bold;
+    font-variant: small-caps;
+  }
+}
