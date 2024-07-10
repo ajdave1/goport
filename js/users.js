@@ -238,11 +238,11 @@ function displayprofile(genderIn) {
   let profileimage = document.querySelector(".user-profile-image");
   if (genderIn === "male") {
     profileimage.innerHTML = `
-               <img src="/img/user avatar male.png" id="profile-picture" >
+               <img src="./img/user avatar male.png" id="profile-picture" >
       `;
   } else if (genderIn === "female") {
     profileimage.innerHTML = `
-           <img src= "/img/user avatar female.avif " id="profile-picture" >
+           <img src= "./img/user avatar female.avif " id="profile-picture" >
         `;
   } else console.log("error");
 }
